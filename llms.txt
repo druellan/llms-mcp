@@ -1,0 +1,23 @@
+# llms-mcp
+
+An MCP (Model Context Protocol) server that exposes the `llms.txt` file from your project root as a resource for AI context enhancement.
+
+## Overview
+
+llms-mcp is a focused MCP server that looks for the `llms.txt` file in the root of your project directory and exposes it as a resource that can be consumed by MCP-compatible AI clients, based on the [llms.txt](https://llmstxt.org) proposed standard.
+
+## Features
+
+- **Detection**: Finds the `llms.txt` file in your project root
+- **File Resource**: Exposes the file via `file://` URI for direct content access
+- **Parsing**: Extracts local file references and external URLs from llms.txt content. Automatically exposes referenced local files and external URLs as additional MCP resources.
+- **Fetching**: Can fetch external resources on-demand.
+
+## Technical Overview
+
+See [README](file://./readme.md) for detailed implementation information.
+
+## Related Projects
+
+- [llms.txt](https://llmstxt.org) - The llms.txt standard
+- [Model Context Protocol](https://modelcontextprotocol.io) - MCP specification

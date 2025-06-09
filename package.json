@@ -1,0 +1,27 @@
+{
+  "name": "llms-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for exposing llms.txt files as resources",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/index.js --test"
+  },
+  "keywords": [
+    "mcp",
+    "llms.txt",
+    "ai",
+    "llm",
+    "context",
+    "documentation"
+  ],
+  "author": "druellan",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
