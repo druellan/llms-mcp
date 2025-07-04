@@ -71,7 +71,7 @@ Add this configuration to your Claude Desktop config file:
       "command": "node",
       "args": ["path/to/llms-mcp/src/index.js"],
       "env": {
-        "ProjectPath": "./" // or "/path/to/your/project"
+        "ProjectPath": "./"
       }
     }
   }
