@@ -49,16 +49,12 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
   const { uri } = request.params;
   
   try {
-    // Handle file URI resources only
-    if (uri.startsWith('file:///')) {
-      const content = await llmsTxtResources.readResource(uri);
-      
-      return {
-        contents: [content]
-      };
-    }
+    // Handle all resource types (file://, http://, https://)
+    const content = await llmsTxtResources.readResource(uri);
     
-    throw new Error(`Unsupported resource URI: ${uri}`);
+    return {
+      contents: [content]
+    };
   } catch (error) {
     throw new Error(`Failed to read resource: ${error.message}`);
   }
